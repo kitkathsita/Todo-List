@@ -1,0 +1,59 @@
+:root {
+  --dark-pink: #FF8DC7;
+  --light-pink: #FFACC7;
+  --belge: #FFDDD2;
+  --peach: #FFB9B9;
+  --white: #F9F9F9;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border: 0%;
+  padding: 0%;
+  margin: 0%;
+}
+
+#bigContent {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  height: 100vh;
+}
+
+.right {
+  background-color: var(--white);
+  padding: 20px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  background-color: var(--dark-pink);
+  margin: 0%;
+  padding: 20px;
+  gap: 10px;
+}
+
+#title > h1 {
+  margin: 0%;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: min(40px, 10vw);
+}
+
+#title > span {
+  font-size: 40px;
+}
+
+#clasification {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.option {
+  font-size: 25px;
+  background-color: white;
+  padding: 10px;
+}
