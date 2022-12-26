@@ -49,11 +49,52 @@ body {
 #clasification {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
-.option {
-  font-size: 25px;
+.option, .project {
+  font-size: 20px;
   background-color: white;
   padding: 10px;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.option:hover, .project:hover {
+  border: 2px solid var(--light-pink);
+}
+
+.first{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.first>h2 {
+  font-size: 30px;
+  margin: 0%;
+  padding: 15px 0px 15px 0px;
+}
+
+.first>i {
+  font-size: 30px;
+  padding: 0px 15px 0px 15px;
+  cursor: pointer;
+}
+
+.first>i:hover{
+  color: var(--dark-pink);
+}
+
+.option>i, .project>i {
+  font-size: 20px;
+  color: black;
+}
+
+.option>p, .project>p {
+  margin: 0%;
 }
