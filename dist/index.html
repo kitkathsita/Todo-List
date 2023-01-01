@@ -34,6 +34,10 @@
       </div>
     </div>
     <div class="content">
+      <div id="titleTasks">
+        <div id="titleTask">All</div>
+        <div id="newTask">New task</div>
+      </div>
       <div class="task">
         <div class="firstPart">
           <div class="check"></div>
@@ -43,6 +47,37 @@
           <i class="bi bi-trash"></i>
           <i class="bi bi-pencil-square"></i>
         </div>
+      </div>
+    </div>
+    <div id="window">
+      <div class="form-popup" id="myForm">
+        <form class="form-container">
+          <div>New task</div>
+          <div class="con">
+            <label for="task">Title:</label>
+            <input type="text" name="task" id="task" placeholder="my task..." required>
+          </div>
+          <div class="con">
+            <label for="info">Description:</label>
+            <textarea name="infor" id="info" cols="30" rows="4"></textarea>
+          </div>
+          <div class="con">
+            <label for="date">Due date:</label>
+            <input type="date" name="date" id="date" required>
+          </div>
+          <div class="con">
+            <label for="priority">Priority:</label>
+            <select name="priority" id="priority" required>
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+          <div class="buttons">
+            <button type="button" id="cancel">Cancel</button>
+            <button type="button" id="add">Add</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
