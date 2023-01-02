@@ -160,11 +160,14 @@ body {
 
 #newTask {
   font-size: 30px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  background-color: white;
   border: 2px solid var(--dark-pink);
   color: var(--dark-pink);
   border-radius: 10px;
   padding: 5px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .task:hover {
@@ -173,6 +176,7 @@ body {
 }
 
 #window {
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -181,7 +185,7 @@ body {
 .form-popup {
   position: relative;
   padding: 20px;
-  margin: 10% auto;
+  margin: 15% auto;
   font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 35px;
   width: 400px;
