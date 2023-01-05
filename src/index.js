@@ -1,5 +1,5 @@
 import './style.css'
-import print from './todo.js' 
+import AllToDo from './todo.js' 
 
 const addTaskButton = document.getElementById('newTask')
 const cancelButton = document.getElementById('cancel')
@@ -13,10 +13,11 @@ function closeForm() {
   document.getElementById("window").style.display = "none";
 }
 
+
 addTaskButton.addEventListener('click', openForm)
 cancelButton.addEventListener('click', closeForm)
 addButton.addEventListener('submit', (e) => {
   e.preventDefault()
-  print()
+  AllToDo()
   closeForm()
 })

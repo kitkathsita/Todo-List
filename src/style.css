@@ -154,8 +154,34 @@ body {
   font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 25px;
   padding: 10px;
-  border: 2px solid var(--light-pink);
   border-radius: 10px;
+}
+
+.High {
+  border: 2px solid var(--dark-pink);
+}
+
+.Medium {
+  border: 2px solid var(--light-pink);
+}
+
+.Low {
+  border: 2px solid var(--belge);
+}
+
+.High:hover {
+  border: 2px solid var(--light-pink);
+  background-color: var(--light-pink);
+}
+
+.Medium:hover {
+  border: 2px solid var(--peach);
+  background-color: var(--peach);
+}
+
+.Low:hover{
+  border: 2px solid var(--belge);
+  background-color: var(--belge);
 }
 
 #newTask {
@@ -168,11 +194,6 @@ body {
   padding: 5px;
   cursor: pointer;
   text-decoration: none;
-}
-
-.task:hover {
-  background-color: var(--belge);
-  border: 2px solid var(--belge);
 }
 
 #window {
