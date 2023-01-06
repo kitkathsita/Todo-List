@@ -1,8 +1,12 @@
-function AllToDo(title, info, date, priority) {
-  const task = new Tasks(title, info, date, priority)
+function createToDo(title, info, date, priority, status) {
+  const task = new Tasks(title, info, date, priority, status)
 
   allTasks(task)
+  createHTML(task)
 
+}
+
+function createHTML(task) {
   const cont = document.querySelector('.content')
   const newTask = document.createElement('div')
   cont.appendChild(newTask)
@@ -22,16 +26,17 @@ const allTask = []
 
 function allTasks(task) {
   allTask.push(task)
-  console.log(allTask)
+
 }
 
 class Tasks {
-  constructor(title, info, date, priority) {
+  constructor(title, info, date, priority, status) {
     this.title = title
     this.info = info
     this.date = date + 'T10:00:00-0500'
     this.priority = priority
+    this.status = status
   }
 }
 
-export {AllToDo, allTask}
+export {createToDo, allTask, createHTML}

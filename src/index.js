@@ -1,7 +1,7 @@
 import './style.css'
 import defaultSetUp from './default.js'
 import print from './clasification'
-import { AllToDo } from './todo.js'
+import { createToDo } from './todo.js'
 
 const addTaskButton = document.getElementById('newTask')
 const cancelButton = document.getElementById('cancel')
@@ -27,7 +27,7 @@ addTaskButton.addEventListener('click', openForm)
 cancelButton.addEventListener('click', closeForm)
 addButton.addEventListener('submit', (e) => {
   e.preventDefault()
-  AllToDo(title.value, info.value, date.value, priority.value)
+  createToDo(title.value, info.value, date.value, priority.value, 'pending')
   closeForm()
 })
 
