@@ -1,10 +1,5 @@
-const title = document.getElementById('task')
-const info = document.getElementById('info')
-const date = document.getElementById('date')
-const priority = document.getElementById('priority')
-
-function AllToDo() {
-  const task = new Tasks(title.value, info.value, date.value, priority.value)
+function AllToDo(title, info, date, priority) {
+  const task = new Tasks(title, info, date, priority)
 
   allTasks(task)
 
@@ -34,9 +29,9 @@ class Tasks {
   constructor(title, info, date, priority) {
     this.title = title
     this.info = info
-    this.date = date
+    this.date = date + 'T10:00:00-0500'
     this.priority = priority
   }
 }
 
-export default AllToDo
+export {AllToDo, allTask}

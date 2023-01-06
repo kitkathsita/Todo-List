@@ -4,6 +4,8 @@
   --belge: #FFDDD2;
   --peach: #FFB9B9;
   --white: #F9F9F9;
+  --pink: #FF74B1;
+  --lighter-pink: #FFD6EC;
 }
 
 body {
@@ -166,22 +168,22 @@ body {
 }
 
 .Low {
-  border: 2px solid var(--belge);
+  border: 2px solid var(--lighter-pink);
 }
 
 .High:hover {
+  border: 2px solid var(--dark-pink);
+  background-color: var(--dark-pink);
+}
+
+.Medium:hover {
   border: 2px solid var(--light-pink);
   background-color: var(--light-pink);
 }
 
-.Medium:hover {
-  border: 2px solid var(--peach);
-  background-color: var(--peach);
-}
-
 .Low:hover{
-  border: 2px solid var(--belge);
-  background-color: var(--belge);
+  border: 2px solid var(--lighter-pink);
+  background-color: var(--lighter-pink);
 }
 
 #newTask {
