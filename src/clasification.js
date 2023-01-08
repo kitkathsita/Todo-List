@@ -1,6 +1,11 @@
 import { allTask } from "./todo"
 import moment from "moment"
 import { createHTML } from "./todo"
+import { closeInfo } from './taskinfo'
+import { openInfo } from './taskinfo'
+import { openForm } from "."
+import { closeForm } from "."
+import { printer } from "."
 
 const currentDate = moment()
 const cont = document.querySelector('.content')
@@ -80,7 +85,28 @@ function print() {
     for(let i = 0; i < allTask.length; i++) {
       createHTML(allTask[i])
     }
+    const addTaskButton = document.getElementById('newTask')
+    const cancelButton = document.getElementById('cancel')
+    const addButton = document.querySelector('.form-container')
+
+    addTaskButton.addEventListener('click', openForm)
+    cancelButton.addEventListener('click', closeForm)
+    addButton.addEventListener('submit', (e) => {
+      e.preventDefault()
+      createToDo(title.value, info.value, date.value, priority.value, 'pending')
+      closeForm()
+    })
   }
+
+  const taskDiv = document.querySelectorAll('.task')
+  const closebutton = document.getElementById('closeButton')
+  const editButton = document.querySelectorAll('.getinfo')
+
+  taskDiv.forEach(task => task.addEventListener('click', openInfo))
+  closebutton.addEventListener('click', closeInfo)
+
+  editButton.forEach(info => info.addEventListener('click', printer))
 }
+
 
 export default print

@@ -1,5 +1,4 @@
 function openInfo() {
-  console.log('hi')
   document.getElementById("window2").style.display = "block";
 }
 

@@ -17,8 +17,8 @@ function createHTML(task) {
     <div>${task.title}</div>
   </div>
   <div class="secondPart">
-    <i class="bi bi-trash"></i>
-    <i class="bi bi-pencil-square"></i>
+    <i class="bi bi-trash delete"></i>
+    <i class="bi bi-pencil-square getinfo"></i>
   </div>`
 }
 

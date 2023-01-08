@@ -40,3 +40,14 @@ const closebutton = document.getElementById('closeButton')
 
 taskDiv.forEach(task => task.addEventListener('click', openInfo))
 closebutton.addEventListener('click', closeInfo)
+
+const editButton = document.querySelectorAll('.getinfo')
+
+function printer(event) {
+  console.log('hello')
+  event.stopPropagation()
+}
+
+editButton.forEach(info => info.addEventListener('click', printer))
+
+export {openForm, closeForm, printer}
