@@ -2,13 +2,15 @@ import './style.css'
 import defaultSetUp from './default.js'
 import print from './clasification'
 import { createToDo } from './todo.js'
+import { closeInfo } from './taskinfo'
+import { openInfo } from './taskinfo'
 
 const addTaskButton = document.getElementById('newTask')
 const cancelButton = document.getElementById('cancel')
 const addButton = document.querySelector('.form-container')
 const clasification = document.querySelectorAll('.option')
 
-const title = document.getElementById('task')
+const title = document.getElementById('tasks')
 const info = document.getElementById('info')
 const date = document.getElementById('date')
 const priority = document.getElementById('priority')
@@ -32,3 +34,9 @@ addButton.addEventListener('submit', (e) => {
 })
 
 clasification.forEach(clasify => clasify.addEventListener('click', print))
+
+const taskDiv = document.querySelectorAll('.task')
+const closebutton = document.getElementById('closeButton')
+
+taskDiv.forEach(task => task.addEventListener('click', openInfo))
+closebutton.addEventListener('click', closeInfo)

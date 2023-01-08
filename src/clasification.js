@@ -75,6 +75,7 @@ function print() {
   else {
     cont.innerHTML = `<div id="titleTasks">
         <div id="titleTask">${this.id}</div>
+        <div id="newTask">New task</div>
       </div>`
     for(let i = 0; i < allTask.length; i++) {
       createHTML(allTask[i])

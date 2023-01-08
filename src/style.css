@@ -205,6 +205,13 @@ body {
   height: 100%;
 }
 
+#window2 {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
 .form-popup {
   position: relative;
   padding: 20px;
@@ -215,6 +222,22 @@ body {
   background-color: var(--white);
   border: solid 2px var(--dark-pink);
   border-radius: 10px;
+}
+
+.task-popup {
+  position: relative;
+  padding: 20px;
+  margin: 20% auto;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 35px;
+  width: 400px;
+  background-color: var(--white);
+  border: solid 2px var(--dark-pink);
+  border-radius: 10px;
+}
+
+.taskInfo, .taskDate, .taskStatus {
+  font-size: 25px;
 }
 
 .form-container {
